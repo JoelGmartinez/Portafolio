@@ -11,7 +11,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="JMG Joel Martínez Gómez Desarrollador web frontend" />
@@ -20,7 +20,7 @@ import Footer from '../components/Footer.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body >
 		<Header/>
 		<main>
 			<slot />
@@ -54,3 +54,13 @@ import Footer from '../components/Footer.astro';
 			monospace;
 	}
 </style>
+
+<script>
+
+  const lightModeInput = document.querySelector('#lightmode');
+
+  lightModeInput?.addEventListener('click', ()=>{
+    document.documentElement.classList.toggle('light');
+
+  })
+</script>

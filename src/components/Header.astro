@@ -1,13 +1,13 @@
 ---
+
 ---
 
-<header class=" px-4 max-auto h-14 lg: lg:px-6 ">
-    
+<header class=" px-4 max-auto h-14 lg: lg:px-6 "> 
     <nav class="flex flex-row justify-between items-center p-10 h-14 ">
         <img class="w-14" src="/public/Joel Martínez Gómez Desarrollador Web .webp" alt="">
         <div>
-            <label class="ui-switch">
-                <input type="checkbox">
+            <label for="lightmode" class="ui-switch">
+                <input type="checkbox" id="lightmode">
                 <div class="slider">
                   <div class="circle"></div>
                 </div>
@@ -109,3 +109,13 @@
   height: 0;
 }
 </style>
+
+<script>
+
+  const lightModeInput = document.querySelector('#lightmode');
+
+  lightModeInput?.addEventListener('click', ()=>{
+    document.documentElement.classList.toggle('light');
+
+  })
+</script>
